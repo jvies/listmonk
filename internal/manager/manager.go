@@ -119,6 +119,7 @@ type Config struct {
 	SlidingWindowRate     int
 	RequeueOnError        bool
 	FromEmail             string
+	BccToSender           bool
 	IndividualTracking    bool
 	LinkTrackURL          string
 	UnsubURL              string

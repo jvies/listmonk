@@ -414,6 +414,7 @@ export default Vue.extend({
         lists: c.lists.map((l) => l.id),
         type: c.type,
         from_email: c.fromEmail,
+        bcc_sender: c.BccToSender,
         content_type: c.contentType,
         messenger: c.messenger,
         tags: c.tags,

@@ -72,6 +72,10 @@
                     :placeholder="$t('campaigns.fromAddressPlaceholder')" required></b-input>
                 </b-field>
 
+                <b-field :label="$t('campaigns.bccToSender')" label-position="on-boreder">
+                  <b-switch v-model="form.bccToSender" :disabled="!canEdit" />
+                </b-field>
+
                 <list-selector
                   v-model="form.lists"
                   :selected="form.lists"
@@ -469,6 +473,7 @@ export default Vue.extend({
         subject: this.form.subject,
         lists: this.form.lists.map((l) => l.id),
         from_email: this.form.fromEmail,
+        bcc_sender: this.form.bccToSender,
         messenger: this.form.messenger,
         type: 'regular',
         headers: this.form.headers,
@@ -493,6 +498,7 @@ export default Vue.extend({
         subject: this.form.subject,
         lists: this.form.lists.map((l) => l.id),
         from_email: this.form.fromEmail,
+        bcc_sender: this.form.bccToSender,
         content_type: 'richtext',
         messenger: this.form.messenger,
         type: 'regular',

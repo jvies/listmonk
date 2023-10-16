@@ -102,6 +102,7 @@ func handlePreviewTemplate(c echo.Context) error {
 			Name:         app.i18n.T("templates.dummyName"),
 			Subject:      app.i18n.T("templates.dummySubject"),
 			FromEmail:    "dummy-campaign@listmonk.app",
+			BccToSender:  false,
 			TemplateBody: tpl.Body,
 			Body:         dummyTpl,
 		}

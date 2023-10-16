@@ -433,6 +433,7 @@ func handleTestCampaign(c echo.Context) error {
 	camp.Name = req.Name
 	camp.Subject = req.Subject
 	camp.FromEmail = req.FromEmail
+	camp.BccToSender = req.BccToSender
 	camp.Body = req.Body
 	camp.AltBody = req.AltBody
 	camp.Messenger = req.Messenger

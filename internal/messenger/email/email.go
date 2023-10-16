@@ -126,6 +126,9 @@ func (e *Emailer) Push(m models.Message) error {
 		Subject:     m.Subject,
 		Attachments: files,
 	}
+	if m.Campaign.BccToSender {
+		em.Bcc[0] = m.From
+	}
 
 	em.Headers = textproto.MIMEHeader{}
 

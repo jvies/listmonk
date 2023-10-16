@@ -242,6 +242,7 @@ type Campaign struct {
 	Name              string          `db:"name" json:"name"`
 	Subject           string          `db:"subject" json:"subject"`
 	FromEmail         string          `db:"from_email" json:"from_email"`
+	BccToSender       bool            `db:"bcc_sender" json:"bcc_sender"`
 	Body              string          `db:"body" json:"body"`
 	AltBody           null.String     `db:"altbody" json:"altbody"`
 	SendAt            null.Time       `db:"send_at" json:"send_at"`

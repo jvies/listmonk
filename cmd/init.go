@@ -56,6 +56,7 @@ type constants struct {
 	LogoURL                       string   `koanf:"logo_url"`
 	FaviconURL                    string   `koanf:"favicon_url"`
 	FromEmail                     string   `koanf:"from_email"`
+	BccToSender                   bool     `koanf:"BccToSender"`
 	NotifyEmails                  []string `koanf:"notify_emails"`
 	EnablePublicSubPage           bool     `koanf:"enable_public_subscription_page"`
 	EnablePublicArchive           bool     `koanf:"enable_public_archive"`
@@ -445,6 +446,7 @@ func initCampaignManager(q *models.Queries, cs *constants, app *App) *manager.Ma
 		MessageRate:           ko.Int("app.message_rate"),
 		MaxSendErrors:         ko.Int("app.max_send_errors"),
 		FromEmail:             cs.FromEmail,
+		BccToSender:           cs.BccToSender,
 		IndividualTracking:    ko.Bool("privacy.individual_tracking"),
 		UnsubURL:              cs.UnsubURL,
 		OptinURL:              cs.OptinURL,

@@ -389,6 +389,7 @@
     "settings.errorNoSMTP": "Au moins un bloc SMTP doit être activé",
     "settings.general.adminNotifEmails": "E-mails pour les notifications admin",
     "settings.general.adminNotifEmailsHelp": "Liste d'adresses e-mail (séparées par des virgules) auxquelles les notifications d'admin telles que les mises à jour d'importation, fins de campagnes, échecs, etc. seront envoyées.",
+    "settings.general.bccToSender": "Envoyer une copie cachée à l'adresse `De`",
     "settings.general.checkUpdates": "Vérifier les mises à jour",
     "settings.general.checkUpdatesHelp": "Vérifier régulièrement si de nouvelles applications sont disponibles et notifier-les.",
     "settings.general.enablePublicArchive": "Activer la page publiques des emails archivés",
